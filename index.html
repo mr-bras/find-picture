@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			background-image: url(banner.jpg);
+			background-size: cover
+		}
+		.box1{
+			position: absolute;
+			height: 200px;
+			width: 350px;
+			background-image: url(1.jpg);
+			background-size: 100% 100%;
+			margin-left: 300px;
+			margin-top: 100px;
+			transition: 0.3s;
+		}
+		.box2{
+			position: absolute;
+			height: 200px;
+			width: 350px;
+			background-image: url(2.jpg);
+			background-size: 100% 100%;
+			margin-left: 800px;
+			margin-top: 100px;
+			transition: 0.3s;
+		}
+		.box3{
+			position: absolute;
+			height: 200px;
+			width: 350px;
+			background-image: url(3.jpg);
+			background-size: 100% 100%;
+			margin-left: 1300px;
+			margin-top: 100px;
+			transition: 0.3s;
+		}
+		.box4{
+			position: absolute;
+			height: 200px;
+			width: 350px;
+			background-image: url(4.jpg);
+			background-size: 100% 100%;
+			margin-left: 300px;
+			margin-top: 400px;
+			transition: 0.3s;
+		}
+		.box5{
+			position: absolute;
+			height: 200px;
+			width: 350px;			background-image: url(5.jpg);
+			background-size: 100% 100%;
+			margin-left: 800px;
+			margin-top: 400px;
+			transition: 0.3s;
+		}
+		.box6{
+			position: absolute;
+			height: 200px;
+			width: 350px;
+			background-image: url(6.jpg);
+			background-size: 100% 100%;
+			margin-left: 1300px;
+			margin-top: 400px;
+			transition: 0.3s;
+		}
+		.os{
+			text-align: center;
+		}
+		.ta{
+			display: none;
+			text-align: center;
+		}
+		.btn{
+			margin-left: 850px;
+			height: 50px;
+			width: 200px;
+
+		}
+	</style>
+</head>
+<body>
+	<h1 class="os">осталось попыток <span class="text1">3</span></h1>
+	<h1 class="ta">Найдите Ganyu</h1>
+	<button class="btn">перемешать</button>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+	<div class="box5"></div>
+	<div class="box6"></div>
+	<script type="text/javascript">
+		let attempts = 3;
+
+		document.querySelector('.btn').onclick = function() {
+			document.querySelector('.ta').style.display = "block"
+			document.querySelector('.box1').style.marginLeft = "800px"
+			document.querySelector('.box2').style.marginLeft = "1300px"
+			document.querySelector('.box2').style.marginTop = "400px"
+			document.querySelector('.box3').style.marginLeft = "300px"
+			document.querySelector('.box3').style.marginTop = "400px"
+			document.querySelector('.box4').style.marginLeft = "800px"
+			document.querySelector('.box5').style.marginLeft = "1300px"
+			document.querySelector('.box5').style.marginTop = "100px"
+			document.querySelector('.box6').style.marginTop = "100px"
+			document.querySelector('.box6').style.marginLeft = "300px"
+			document.querySelector('.box1').style.background = "black"
+			document.querySelector('.box2').style.background = "black"
+			document.querySelector('.box3').style.background = "black"
+			document.querySelector('.box4').style.background = "black"
+			document.querySelector('.box5').style.background = "black"
+			document.querySelector('.box6').style.background = "black"
+		}
+
+		document.querySelector('.box1').onclick = function() {
+			document.querySelector('.box1').style.backgroundImage  = "url(1.jpg)"
+				document.querySelector('.box1').style.backgroundSize  = "100% 100%";
+				alert('угадал')
+				document.querySelector('.box1').style.display = "none"
+				document.querySelector('.box2').style.display = "none"
+				document.querySelector('.box3').style.display = "none"
+				document.querySelector('.box4').style.display = "none"
+				document.querySelector('.box5').style.display = "none"
+				document.querySelector('.box6').style.display = "none"
+			    document.querySelector('body').style.backgroundImage = "url(win.png)"
+				document.querySelector('.os').style.display = "none"
+				document.querySelector('.ta').style.display = "none"
+				document.querySelector('.btn').style.display = "none"
+			}
+
+		document.querySelector('.box2').onclick = function() {
+			attempts = attempts - 1;
+			alert('неправильно')
+			document.querySelector('.box2').style.backgroundImage  = "url(2.jpg)"
+				document.querySelector('.box2').style.backgroundSize  = "100% 100%"
+			document.querySelector('.text1').innerHTML = attempts;
+			if(attempts==0) {
+				alert('you lose')
+				document.querySelector('.box1').style.display = "none"
+				document.querySelector('.box2').style.display = "none"
+				document.querySelector('.box3').style.display = "none"
+				document.querySelector('.box4').style.display = "none"
+				document.querySelector('.box5').style.display = "none"
+				document.querySelector('.box6').style.display = "none"
+				document.querySelector('body').style.backgroundImage = "url(lose.jpg)"
+				document.querySelector('.os').style.display = "none"
+				document.querySelector('.ta').style.display = "none"
+				document.querySelector('.btn').style.display = "none"
+			}
+		}
+
+		document.querySelector('.box3').onclick = function() {
+			attempts = attempts - 1;
+			alert('неправильно')
+			document.querySelector('.box3').style.backgroundImage  = "url(3.jpg)"
+				document.querySelector('.box3').style.backgroundSize  = "100% 100%"
+			document.querySelector('.text1').innerHTML = attempts;
+			if(attempts==0) {
+				alert('you lose')
+				document.querySelector('.box1').style.display = "none"
+				document.querySelector('.box2').style.display = "none"
+				document.querySelector('.box3').style.display = "none"
+				document.querySelector('.box4').style.display = "none"
+				document.querySelector('.box5').style.display = "none"
+				document.querySelector('.box6').style.display = "none"
+				document.querySelector('body').style.backgroundImage = "url(lose.jpg)"
+				document.querySelector('.os').style.display = "none"
+				document.querySelector('.ta').style.display = "none"
+				document.querySelector('.btn').style.display = "none"
+			}
+		}
+
+		document.querySelector('.box4').onclick = function() {
+			attempts = attempts - 1;
+			alert('неправильно')
+			document.querySelector('.box4').style.backgroundImage  = "url(4.jpg)"
+				document.querySelector('.box4').style.backgroundSize  = "100% 100%"
+			document.querySelector('.text1').innerHTML = attempts;
+			if(attempts==0) {
+				alert('you lose')
+				document.querySelector('.box1').style.display = "none"
+				document.querySelector('.box2').style.display = "none"
+				document.querySelector('.box3').style.display = "none"
+				document.querySelector('.box4').style.display = "none"
+				document.querySelector('.box5').style.display = "none"
+				document.querySelector('.box6').style.display = "none"
+				document.querySelector('body').style.backgroundImage = "url(lose.jpg)"
+				document.querySelector('.os').style.display = "none"
+				document.querySelector('.ta').style.display = "none"
+				document.querySelector('.btn').style.display = "none"
+			}
+		}
+
+		document.querySelector('.box5').onclick = function() {
+			attempts = attempts - 1;
+			alert('неправильно')
+			document.querySelector('.box5').style.backgroundImage  = "url(5.jpg)"
+				document.querySelector('.box5').style.backgroundSize  = "100% 100%"
+			document.querySelector('.text1').innerHTML = attempts;
+			if(attempts==0) {
+				alert('you lose')
+				document.querySelector('.box1').style.display = "none"
+				document.querySelector('.box2').style.display = "none"
+				document.querySelector('.box3').style.display = "none"
+				document.querySelector('.box4').style.display = "none"
+				document.querySelector('.box5').style.display = "none"
+				document.querySelector('.box6').style.display = "none"
+				document.querySelector('body').style.backgroundImage = "url(lose.jpg)"
+				document.querySelector('.os').style.display = "none"
+				document.querySelector('.ta').style.display = "none"
+				document.querySelector('.btn').style.display = "none"
+			}
+		}
+
+		document.querySelector('.box6').onclick = function() {
+			attempts = attempts - 1;
+			alert('неправильно')
+			document.querySelector('.box6').style.backgroundImage  = "url(6.jpg)"
+				document.querySelector('.box6').style.backgroundSize  = "100% 100%"
+			document.querySelector('.text1').innerHTML = attempts;
+			if(attempts==0) {
+				alert('you lose')
+				document.querySelector('.box1').style.display = "none"
+				document.querySelector('.box2').style.display = "none"
+				document.querySelector('.box3').style.display = "none"
+				document.querySelector('.box4').style.display = "none"
+				document.querySelector('.box5').style.display = "none"
+				document.querySelector('.box6').style.display = "none"
+				document.querySelector('body').style.backgroundImage = "url(lose.jpg)"
+				document.querySelector('.os').style.display = "none"
+				document.querySelector('.ta').style.display = "none"
+				document.querySelector('.btn').style.display = "none"
+			}
+		}
+	</script>
+</body>
+</html>
